@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@700&family=Lato:wght@300;700&family=Roboto+Condensed:wght@300&display=swap"
+        rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sbuttons/dist/sbuttons.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/computer.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" media="screen and (max-width: 480px) and (orientation:portrait)" href="css/mobile.css">
+    <link rel="icon" href="images/A.png">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abel&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syncopate&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Play&family=Rye&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+    <title>metavegas </title>
+
+    <style>
+
+
+
+    </style>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      
+      body {
+        background-color: #474e5d;
+        font-family: Helvetica, sans-serif;
+      }
+      
+      /* The actual timeline (the vertical ruler) */
+      .timeline {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      
+      /* The actual timeline (the vertical ruler) */
+      .timeline::after {
+        content: '';
+        position: absolute;
+        width: 6px;
+        background-color: white;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -3px;
+      }
+      
+      /* Container around content */
+      .container {
+        padding: 10px 40px;
+        position: relative;
+        background-color: inherit;
+        width: 50%;
+      }
+      
+      /* The circles on the timeline */
+      .container::after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        right: -17px;
+        background-color: white;
+        border: 4px solid #FF9F55;
+        top: 15px;
+        border-radius: 50%;
+        z-index: 1;
+      }
+      
+      /* Place the container to the left */
+      .left {
+        left: 0;
+      }
+      
+      /* Place the container to the right */
+      .right {
+        left: 50%;
+      }
+      
+      /* Add arrows to the left container (pointing right) */
+      .left::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 22px;
+        width: 0;
+        z-index: 1;
+        right: 30px;
+        border: medium solid white;
+        border-width: 10px 0 10px 10px;
+        border-color: transparent transparent transparent white;
+      }
+      
+      /* Add arrows to the right container (pointing left) */
+      .right::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 22px;
+        width: 0;
+        z-index: 1;
+        left: 30px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+      }
+      
+      /* Fix the circle for containers on the right side */
+      .right::after {
+        left: -16px;
+      }
+      
+      /* The actual content */
+      .content {
+        padding: 20px 30px;
+        background-color: white;
+        position: relative;
+        border-radius: 6px;
+      }
+      
+      /* Media queries - Responsive timeline on screens less than 600px wide */
+      @media screen and (max-width: 600px) {
+        /* Place the timelime to the left */
+        .timeline::after {
+        left: 31px;
+        }
+        
+        /* Full-width containers */
+        .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+        }
+        
+        /* Make sure that all arrows are pointing leftwards */
+        .container::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+        }
+      
+        /* Make sure all circles are at the same spot */
+        .left::after, .right::after {
+        left: 15px;
+        }
+        
+        /* Make all right containers behave like the left ones */
+        .right {
+        left: 0%;
+        }
+      }
+      </style>
+    <style>
+        body {
+          font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+    <style>
+            h1 {
+              font-family: 'Orbitron', sans-serif;
+              font-weight: 100;
+            }
+    </style>
+         <style>
+            h5 {
+              font-family: 'Play', sans-serif;
+            }
+        </style>
+          <style>
+            h2,h4 {
+              font-family: 'Montserrat', sans-serif;
+            }
+        </style>
+          <style>
+            h6 {
+                font-family: 'Syncopate', sans-serif;
+                font-weight: 100;
+            }
+        </style>
+
+        <style>
+          h3 {
+            font-family: 'Lato', sans-serif;
+          }
+        </style>
+        
+   
+</head>
+
+<body onload="fadeInNavbar()">
+    <div class="w3-top" data-aos="fade-down" data-aos-delay="1000"  data-aos-duration="500" >
+        <div class="w3-bar w3-black w3-wide w3-padding w3-card">
+          <a href="#home" class="w3-bar-item w3-button"><b>METAVEGAX</b> </a>
+          <!-- Float links to the right. Hide them on small screens -->
+          <div class="w3-right w3-hide-small">
+            <a href="#about" class="w3-bar-item w3-button">About</a>
+            <a href="#tokenomics" class="w3-bar-item w3-button">Tokenomics</a>
+            <a href="#roadmap" class="w3-bar-item w3-button">Roadmap</a>
+            <a href="https://metaverse-bingo.gitbook.io/metavegasxr-whitepaper./" class="w3-bar-item w3-button" target="_blank">Whitepaper</a>
+            <a href="game.html" class="w3-bar-item w3-button">Casino</a>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <header class="w3-display-container  w3-padding-64 w3-wide" style="max-width:100%;" id="home">
+        
+       
+        <div class="w3-display-middle w3-margin-top w3-center ">
+          <img src="images/kkk.png"  style="width: 350px;" data-aos="flip-right" data-aos-delay="5000" data-aos-duration="3000"
+          data-aos-anchor-placement="top-bottom">
+         
+          <h5 class="w3-text-grey w3-xxlarge"  data-aos="fade-up" data-aos-delay="3000" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">'BE THE HOUSE !'</h5>
+        </div>
+      </header>
+
+   
+
+  <!-- First Grid -->
+        <div id="about"  class="w3-row-padding w3-padding-64 w3-black w3-text-white w3-container ">
+            <h1 class="w3-xxlarge w3-text-white w3-center"><span class="w3-padding w3-black w3-opacity-min" data-aos="fade-in" data-aos-delay="500" data-aos-anchor-placement="top-bottom" data-aos-duration="3000" data-aos-easing="ease-in-quad" ><b>WELCOME TO THE HOUSE !</b></span> <span class="w3-hide-small w3-text-light-grey"></span></h1>
+           
+            <br> <br>
+            <div class="w3-content">
+               
+            <div  class="w3-twothird">
+               
+                <h4 data-aos="fade-right" data-aos-delay="500" data-aos-anchor-placement="top-bottom" data-aos-duration="1000"  class="w3-padding-32 w3-text-light-grey w3-xlarge">Where Decentralized Gambling meets The Metaverse ! A gambling playground co-owned by Liquidity Pool Stakers with 20+ casino games. Here, players may chose to be the house, play alone or against other casino players around the world, so as to win tokens, XPs and scarce VegasApe roles through skills and strategy.
+
+
+              
+            </div>
+        
+            <div class="w3-third w3-center">
+                <img src="images/V1.jpeg"  class="w3-image" data-aos="fade-left" data-aos-delay="500" data-aos-duration="1000"
+                data-aos-anchor-placement="top-bottom">
+            </div>
+            </div>
+         </div>
+
+         <div class="w3-content">
+
+          <div class="w3-third w3-center">
+            <img src="images/V2.jpeg"  class="w3-image" data-aos="flip-right" data-aos-delay="5000" data-aos-duration="3000"
+            data-aos-anchor-placement="top-bottom">
+           </div>
+               
+          <div  class="w3-twothird">
+             
+              <h4 data-aos="fade-left" data-aos-delay="500" data-aos-anchor-placement="top-bottom" data-aos-duration="1000"  class="w3-padding-32 w3-text-light-grey w3-xlarge">MetavegaX is an online casino on the Metaverse which operates on the $MXP token and off the concept of Liquidity Pools, allowing you the opportunity to Be The House! Holders can either use their tokens to provide Liquidity for the Casino, or play any of our wide selection of games ranging from Casino Classics (Blackjack, Poker, and slot games) to more Modern Games. The project also partners with independent game developers to introduce more games to the platform as voted by the community ( DAO ).
+
+
+            
+          </div>
+      
+        
+          </div>
+       </div>
+
+        <div class="w3-container  w3-black w3-text-light-grey"  >
+            <h1 class="w3-center w3-xxlarge" data-aos="fade-in" data-aos-delay="500" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" class="w3-text-light-grey">WHY METAVEGAX ?</h1>
+            <br><br><br><br> 
+            <div  class="w3-row-padding  w3-center" >
+              <div class="w3-row-padding">
+                <div data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000" class="w3-third w3-container w3-margin-bottom">
+                  <img src="images/PROFIT.png" alt="Norway" style="width: 50%" class="w3-hover-opacity ">
+                  <div class="w3-container w3-black w3-text-light-grey">
+                    <p class="w3-xxlarge"><b>PROFIT</b></p>
+                    <p class="w3-large" >When the House Loses, $MXP Tokens are removed from the Liquidity Pool as payout to the winners. The team does not pay from team holdings</p><p class="w3-large" ></p>
+
+                      In turn, the $MXP value of EACH LP Token decreases</p>
+                  </div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000" class="w3-third w3-container w3-margin-bottom">
+                  <img src="images/LPTOKENS.png" alt="Norway" style="width: 50%"   class="w3-hover-opacity">
+                  <div class="w3-containerw3-black w3-text-light-grey">
+                    <p class="w3-xxlarge"><b>LP TOKENS</b></p>
+                    <p class="w3-large" >When the House wins, the Winnings are deposited into the Liquidity Pool and the House does NOT receive LP Tokens. </p>
+
+                      <p class="w3-large" > In turn, the $MXP value of EACH LP Token rises.</p>
+                  </div>
+                </div>
+                <div data-aos="fade-left" data-aos-delay="500" data-aos-duration="2000" class="w3-third w3-container">
+                  <img src="images/DAO.png" alt="Norway" style="width: 50%"   class="w3-hover-opacity">
+                  <div class="w3-containerw3-black w3-text-light-grey">
+                    <p class="w3-xxlarge"><b>DAO</b></p>
+                    <p class="w3-large" >Being decentralized, the Community provides the $MXP tokens that the games operate on. By providing $MXP Tokens to a Liquidity Pool, players  receive back LP Tokens which represent your fractional share of the Liquidity Pool and voting power in DAO goveranance proposals.
+
+                    </p>
+                  </div>
+                </div>
+              </div><br>
+              
+            </div>
+          </div>
+          
+          <div id="about"  class="w3-row-padding w3-padding-64 w3-black w3-text-white w3-container ">
+            <h1 class="w3-xxlarge w3-text-white w3-center"data-aos="fade-right" data-aos-delay="500" data-aos-anchor-placement="top-bottom" data-aos-duration="1500" >DREAMLAND XR </h1>
+
+            <h1 class="w3-xxlarge w3-text-white w3-center" data-aos="fade-left" data-aos-delay="500" data-aos-anchor-placement="top-bottom" data-aos-duration="1500"  >VIRTUAL REALITY</h1>
+
+             <br>
+
+            <div class="w3-content"  data-aos="fade-in" data-aos-delay="1000" data-aos-anchor-placement="top-bottom" data-aos-duration="3000" >
+              <p class="w3-xlarge">
+                MetavegasXR  devs are developing Metaverse integration with DreamlandXR's Meta-Cities. Meta Cities is an open source connected network of cross platform metaverse experiences where you can live, work and play in hybrid live / virtual reality worlds.. </p> <br>
+                <p class="w3-xlarge"> MetavegaX is the world's first fully integrated virtual reality city featuring a digital twin of the entire Las Vegas Valley. MetavegasXR DAO's goal is to buy space, build virtual spaces and introduce play to earn casino/ gambling and membership NFTs. Profits from the Metaverse Casino and casino NFTs will be distributed to stakers.
+              </p>
+            </div>
+           
+
+
+           </div>
+          
+          <div class="w3-row-padding w3-padding-64 w3-black w3-text-white w3-container ">
+            <br><br><br><br><br> <br>
+            <br> <br>
+            <div id="tokenomics" class="w3-content">
+                <h6  data-aos="fade-up" data-aos-delay="1000" data-aos-duration="2000" class="w3-text-grey">TAXES AND SUPPLY</h6>
+                <h1  data-aos="fade-up"  data-aos-duration="1000" class="w3-jumbo w3-text-white w3-left ">T O K E N O M I C S</h1>
+               
+            <div data-aos="zoom-in-down" data-aos-delay="500" data-aos-duration="1000" class="w3-twothird">
+               
+                <h4   class="w3-xlarge w3-padding-32 w3-text-light-grey">
+                  Tht $MVX Token is a BEP-20 ob the Binance Smart Chain. Players can obtain a contribution value in the Metavegax Casino games and redeem it for $MVX Tokens. With the MVX Tokens, they can buy VegasApe NFTs, shop in the game mall, obtain DAOgovernance rights by staking MVX tokens and share Casino revenue. 
+                </h4>
+                 
+              
+            </div>
+        
+            <div class="w3-third w3-center">
+                <img src="images/tokenomics.png"  class="w3-image" data-aos="flip-right" data-aos-delay="1000" data-aos-duration="1000"
+                data-aos-anchor-placement="top-bottom"> <br><br><br><br>
+            </div>
+            <br>
+            </div>
+            <br> <br> <br> <br> <br>
+            <div  data-aos="fade-down" data-aos-delay="1000"
+            data-aos-easing="linear"
+            data-aos-duration="1000" class="w3-row-padding">
+                <div class="w3-third w3-container  w3-margin-bottom">
+                  
+                  <div class="w3-container w3-border w3-border-black w3-round-xlarge w3-indigo">
+                    <h2>MARKETING-3%  </h2>
+                    <h4>From each transacrion, a tax of 3% of the sales will be used to market and promote the token.</h4>
+                  </div>
+                </div>
+                <div class="w3-third w3-container w3-margin-bottom">
+                 
+                  <div class="w3-container w3-border w3-round-xlarge w3-border-black w3-indigo">
+                    <h2>LIQUIDITY-3%</h2>
+                    <h4>#% of each transaction goes to aut-liquidity to grow the protocol</h4>
+                  </div>
+                </div>
+                <div class="w3-third  w3-round-xlarge  w3-container">
+                  
+                  <div class="w3-container  w3-round-xlarge w3-indigo">
+                    <h2>DEVELOPMENT-5%</h2> 
+                    <h4>5% tax of each transaction goes to the development charter and pool to finish with the build to the Metaverse Casino</h4>
+                  </div>
+                </div>
+              </div>
+             
+
+            </div>
+
+            </div>
+
+            <div id="roadmap"  class="w3-row-padding w3-padding-64 w3-black w3-text-black w3-container ">
+              <h1 class="w3-jumbo w3-text-white w3-center"data-aos="fade-right" data-aos-delay="1000" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" >R O A D M A P</h1>
+              <br><br><br><br>
+              <div class="w3-content">
+
+
+                <div class="timeline w3-large" data-aos="zoom-out-down" data-aos-delay="500" data-aos-duration="1000"  >
+                  <div class="container left">
+                    <div class="content">
+                      <h2>DEC -JAN 1</h2>
+                      <h3>Website launch</h3>
+                      <h3>Marketing(Collaborations, Giveaways)</h3>
+                      <h3>Whitelist contest</h3>
+                      <h3>Weekly AMA and live updates</h3>
+                    </div>
+                  </div>
+                  <div class="container right">
+                    <div class="content">
+                      <h2>JAN 1 - JAN 10</h2>
+                      <h3>Initial NFT offering-Founder NFTs</h3>
+                      <h3>100% rare MVX Gamblers NFT sale</h3>
+                      <h3>Staking contract launch</h3>
+                      <h3>DEX listings</h3>
+                    </div>
+                  </div>
+                  <div class="container left">
+                    <div class="content">
+                      <h2>JAN 10 - FEB 28</h2>
+                      <h3>Web play to earn beta</h3>
+                      <h3>Reward profits to LP stakers/NFT holders</h3>
+                      <h3>Influencer promotions</h3>
+                      <h3>Giveaways at 1000 holders</h3>
+                    </div>
+                  </div>
+                  <div class="container right">
+                    <div class="content">
+                      <h2>FEB 28 - MID APRIL </h2>
+                      <h3>Acquire Land in Dreamland XR</h3>
+                      <H3>Plan the Casino</H3>
+                      <h3>Launch lottery for the NFT holders</h3>
+                      <h3>SPAWN II NFTs - 444 VEGAPES</h3>
+                      <h3>444 random token holders get a unique gambler avatar</h3>
+                      <h3>DAO goveranance proposals</h3>
+                    </div>
+                  </div>
+                  <div class="container left">
+                    <div class="content">
+                      <h2>APRIL - JULY</h2>
+                      <h3>Completion of the Metavegax Casino</h3>
+                      <h3> Make sure all regulatory/legal requirments are met</h3>
+                      <h3>Monetize space and distribute the passive profits to the foundry NFT hodlers</h3>
+                    </div>
+                  </div>
+                 
+                </div>
+
+
+              </div>
+
+            </div>
+
+            <div id="contactz"  class="w3-row-padding w3-padding-64 w3-black w3-text-black w3-container ">
+              <h1 class="w3-jumbo w3-text-white w3-center"data-aos="fade-right" data-aos-delay="1000" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" >CONTACT US !</h1>
+              <div class="w3-content w3-center " data-aos="fade-up" data-aos-delay="1000" data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
+                <div class="w3-third " >
+                  <a href="#" class="w3-bar-item w3-white w3-button"><h3>TELEGRAM</h3></a>
+
+                </div>
+                <div class="w3-third">
+                  <a href="#" class="w3-bar-item w3-white w3-button"><h3>TWITTER</h3></a>
+
+                </div>
+                <div class="w3-third">
+                  <a href="#" class="w3-bar-item w3-white w3-button"><h3>EMAIL</h3></a>
+
+                </div>
+
+              </div>
+
+            
+
+
+            
+        </div>
+
+
+
+   
+
+    <script src="js/navbar.js"></script>
+    <script src="js/mediaquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/1.31.1/tsparticles.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
